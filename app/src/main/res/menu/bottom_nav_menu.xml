@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+<item
+    android:id="@+id/popularMenu"
+    android:title="Popular"
+    android:icon="@drawable/group"
+    app:cnb_backgroundColor="@color/black"
+    app:cnb_textColor = "@color/white"
+    app:cnb_iconColor="@color/white"
+
+
+    />
+
+
+    <item
+        android:id="@+id/trendingMenu"
+        android:title="Trending"
+        android:icon="@drawable/trending"
+        app:cnb_backgroundColor="@color/black"
+        app:cnb_textColor = "@color/white"
+        app:cnb_iconColor="@color/white"
+        />
+
+</menu>

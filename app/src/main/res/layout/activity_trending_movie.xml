@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="TrendingMovie"
+            type="com.example.movieproapp.trendingMovieModel.TrendingMovieModal" />
+
+    </data>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrendingMovieActivity">
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme.AppBarOverlay"
+    >
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        android:id="@+id/ctb_trendingMovie"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                bind:posterPath="@{TrendingMovie.releaseDate}"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+    <include
+
+        layout="@layout/content_layout_trending"
+        android:id="@+id/trending_secondary_layout"
+        bind:secondaryTrendingMovie="@{TrendingMovie}"
+
+        />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
